@@ -8,14 +8,24 @@ donuts_hash = {
 puts "What donuts are available to buy today?"
 puts "#{donuts_hash} are fresh and ready to sell."
 
-puts "Let's add 2 more vanilla, they are popular."
-donuts_hash[:vanilla]=4
+puts "Not sure 2 vanilla is enough, how many vanilla donuts do you think we need?"
+more_vanilla = gets.chom
+donuts_hash[:vanilla] = more_vanilla
 puts "Now we have #{donuts_hash} ready to sell."
-puts "Let's add some lemon donutes too."
 
-donuts_hash[:lemon] = 2
-puts "What's the count now?"
-puts "#{donuts_hash}"
+puts "What other flavor donuts should we add?"
+new_donut = gets.chomp.downcase
+donuts_hash[new_donut] = 1
+puts "Now we have #{donuts_hash} ready to sell."
+
+
+puts "Now we have too many flavors. Which one should we delete?"
+delete_donut = gets.chomp.downcase
+
+
+puts "Now we have #{donuts_hash} ready to sell."
+
+
 
 #class Donuts
 #  @vanilla = vanilla
